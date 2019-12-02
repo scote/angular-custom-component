@@ -1,0 +1,6 @@
+<ng-container
+  *ngFor="let childModel of childMetadataModelGenericTemplates">
+  <app-generic-component [title]="childModel.title"></app-generic-component>
+</ng-container>
+
+<ng-template [ngTemplateOutlet]="customChildsTemplate" [ngTemplateOutletContext]="{ $implicit: childMetadataModelCustomTemplates }"></ng-template>
